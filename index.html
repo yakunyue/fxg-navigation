@@ -4,185 +4,133 @@
     <meta charset="UTF-8">
     <title>锋秀阁应用导航</title>
     <!-- import CSS -->
-    <link rel="stylesheet" href="./css/element.css">
+    <!--    <link rel="stylesheet" href="./css/element.css">-->
 
     <style>
 
-        .card {
-            border: 1px solid #dfdfdf;
+        #app {
+            display: flex;
             flex-direction: column;
-            height: 240px;
-            width: 360px;
-            margin-top: 60px;
-            margin-left: 40px;
+            justify-content: space-between;
         }
 
-        .item-top {
-            height: 80px;
-            padding: 20px;
+        .category {
+            margin-left: 30px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: left;
+            flex-wrap: wrap;
+            /*padding: 20px;*/
+            /*padding-right: 40px;*/
+            /*padding-bottom: 30px;*/
+        }
+
+        .card {
+            margin-left: 40px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 1px solid #dfdfdf;
+            border-radius: 10px;
+            height: 220px;
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            /*box-shadow: 2px 1px 1px 1px #EBEEF5*/
         }
 
         .item-logo {
-            width: 60px;
-            height: 60px;
-            margin-right: 20px;
-
+            width: 90px;
+            height: 90px;
+            /*margin: 20px;*/
         }
 
         .item-logo img {
             width: 100%;
             height: 100%;
-
-        }
-
-        .item-body {
-            flex-direction: column;
-        }
-
-        .item-bottom {
-            height: 40px;
-            justify-content: space-around;
-            align-items: center;
-            color: #888888;
-            background-color: #F7F7F7;
-            font-size: 13px;
         }
 
         .title {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
-            padding-bottom: 10px;
         }
 
         .notice {
-            font-size: 12px;
+            font-size: 14px;
             color: #888;
         }
 
-        #app{
-            display: flex;
-            justify-content: space-around;
+        .foot {
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 1px 2px #999;
+            /*padding-bottom: 20px;*/
         }
+
     </style>
 </head>
 <body style="background-image:url(./img/back2.jpg); background-size:cover">
 <div id="app">
-    <el-card class="card" shadow="hover">
-            <a href="https://about.gitlab.com/" target="_blank">
-                <div class="item-top">
-                    <div class="item-logo"><img src="img/gitlab.png"></div>
-                    <div class="item-body">
-                        <span class="title">Gitlab系统</span>
-                        <span class="notice">Gitlab内部代码仓库</span>
-                    </div>
-                </div>
-            </a>
-            <div class="item-bottom">
-                <a href="https://docs.gitlab.com/ee/README.html" target="_blank">
-                    <div>帮助文档</div>
-                </a>
-            </div>
-    </el-card>
 
-    <el-card class="card" shadow="hover">
-        <a href="https://about.gitlab.com/" target="_blank">
-            <div class="item-top">
-                <div class="item-logo"><img src="img/gitlab.png"></div>
-                <div class="item-body">
-                    <span class="title">Gitlab系统</span>
-                    <span class="notice">Gitlab内部代码仓库</span>
-                </div>
-            </div>
-        </a>
-        <div class="item-bottom">
-            <a href="https://docs.gitlab.com/ee/README.html" target="_blank">
-                <div>帮助文档</div>
-            </a>
-        </div>
-    </el-card>
+    <div style="margin-top: 20px" class="category">
+        <span class="title">应用系统</span>
+    </div>
 
-    <el-card class="card" shadow="hover">
-        <a href="https://about.gitlab.com/" target="_blank">
-            <div class="item-top">
-                <div class="item-logo"><img src="img/gitlab.png"></div>
-                <div class="item-body">
-                    <span class="title">Gitlab系统</span>
-                    <span class="notice">Gitlab内部代码仓库</span>
-                </div>
-            </div>
-        </a>
-        <div class="item-bottom">
-            <a href="https://docs.gitlab.com/ee/README.html" target="_blank">
-                <div>帮助文档</div>
-            </a>
+    <div class="box">
+        <div class="card" onclick="window.open('https://house.fengxiuge.top')">
+            <div class="item-logo"><img src="img/house.png"></div>
+            <span class="title">小链家</span>
+            <span class="notice">链家二手房成交数据可视化系统</span>
         </div>
-    </el-card>
+    </div>
 
-    <el-card class="card" shadow="hover">
-        <a href="https://about.gitlab.com/" target="_blank">
-            <div class="item-top">
-                <div class="item-logo"><img src="img/gitlab.png"></div>
-                <div class="item-body">
-                    <span class="title">Gitlab系统</span>
-                    <span class="notice">Gitlab内部代码仓库</span>
-                </div>
-            </div>
-        </a>
-        <div class="item-bottom">
-            <a href="https://docs.gitlab.com/ee/README.html" target="_blank">
-                <div>帮助文档</div>
-            </a>
-        </div>
-    </el-card>
+    <div class="category">
+        <span class="title">运维系统</span>
+    </div>
 
-    <el-card class="card" shadow="hover">
-        <a href="https://about.gitlab.com/" target="_blank">
-            <div class="item-top">
-                <div class="item-logo"><img src="img/gitlab.png"></div>
-                <div class="item-body">
-                    <span class="title">Gitlab系统</span>
-                    <span class="notice">Gitlab内部代码仓库</span>
-                </div>
-            </div>
-        </a>
-        <div class="item-bottom">
-            <a href="https://docs.gitlab.com/ee/README.html" target="_blank">
-                <div>帮助文档</div>
-            </a>
+    <div class="box">
+        <div class="card" onclick="window.open('http://34.92.3.80:3000/d/7tLmlbzGk/jvm-micrometer?orgId=1&refresh=30s')">
+            <div class="item-logo"><img src="img/jenkins.png"></div>
+            <span class="title">Jenkins</span>
+            <span class="notice">Jenkins应用发布管理系统</span>
         </div>
-    </el-card>
+        <div class="card" onclick="window.open('http://34.92.3.80:3000/d/7tLmlbzGk/jvm-micrometer?orgId=1&refresh=30s')">
+            <div class="item-logo"><img src="img/grafana.png"></div>
+            <span class="title">Grafana</span>
+            <span class="notice">服务器运行状态监控系统</span>
+        </div>
+        <div class="card" onclick="window.open('http://34.92.3.80:15588/#{%221590726793952%22:[%22app2|house-service%22]}')">
+            <div class="item-logo"><img src="img/logout.png"></div>
+            <span class="title">log.io</span>
+            <span class="notice">线上实时日志监控系统</span>
+        </div>
+    </div>
 
-    <el-card class="card" shadow="hover">
-        <a href="https://about.gitlab.com/" target="_blank">
-            <div class="item-top">
-                <div class="item-logo"><img src="img/gitlab.png"></div>
-                <div class="item-body">
-                    <span class="title">Gitlab系统</span>
-                    <span class="notice">Gitlab内部代码仓库</span>
-                </div>
-            </div>
-        </a>
-        <div class="item-bottom">
-            <a href="https://docs.gitlab.com/ee/README.html" target="_blank">
-                <div>帮助文档</div>
-            </a>
-        </div>
-    </el-card>
+
+    <div class="foot">
+        <span>© 2020 yueyakun2017  </span>
+        <span style="margin-left: 10px">京ICP备19014273号  </span>
+    </div>
 </div>
+
 </body>
 <!-- import Vue before Element -->
 <script src="./js/vue.js"></script>
 <!-- import JavaScript -->
 <script src="./js/element.js"></script>
 
-<script type="text/javascript" src="lib/vue.js"></script>
-<script type="text/javascript" src="lib/elementui/index.js"></script>
 <script>
-    new Vue({
-        el: '#app',
-        data: function () {
-            return {visible: false}
-        }
-    })
+    // new Vue({
+    //     el: '#app',
+    //     data: function () {
+    //         return {visible: false}
+    //     }
+    // })
 </script>
 </html>
