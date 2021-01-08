@@ -4,34 +4,40 @@
     <meta charset="UTF-8">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <title>应用导航</title>
+    <title>常用网站导航</title>
     <style>
 
         .body {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-        }
-
-        .category {
-            margin-left: 60px;
+            width: 100%;
+            height: 100vh;
         }
 
         .box {
+            width: 100%;
+            height: 95%;
             display: flex;
-            justify-content: left;
+            flex-direction: row;
+            justify-content: space-around;
             flex-wrap: wrap;
         }
 
+        .foot {
+            flex: 1;
+            font-size: 12px;
+            line-height: 21px;
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 1px 2px #999;
+        }
         .card {
-            margin-left: 85px;
             margin-top: 20px;
-            margin-bottom: 20px;
+            margin-right: 20px;
             background-color: rgba(255, 255, 255, 0.5);
             border: 1px solid #dfdfdf;
             border-radius: 10px;
             height: 220px;
             width: 320px;
+
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -48,7 +54,6 @@
         }
 
         .item-logo img {
-            /*width: 100%;*/
             height: 100%;
             display: block;
             margin: auto;
@@ -63,25 +68,19 @@
             font-size: 14px;
             color: #888;
         }
-
-        .foot {
-            font-size: 12px;
-            line-height: 21px;
-            text-align: center;
-            color: #fff;
-            text-shadow: 0 1px 2px #999;
-        }
-
     </style>
 </head>
 <body style="background-image:url(img/back-colours-mountain.jpg); background-size:cover">
 <div id="app" class="body">
 
-    <div style="margin-top: 20px" class="category">
-        <span class="title">常用网站</span>
-    </div>
-
     <div class="box">
+
+        <div class="card" onclick="window.open('https://github.com/')">
+            <div class="item-logo"><img src="img/github.png"></div>
+            <span class="title">GitHub</span>
+            <span class="notice">GitHub</span>
+        </div>
+
         <div class="card" onclick="window.open('https://house.fengxiuge.top')">
             <div class="item-logo"><img src="img/house.png"></div>
             <span class="title">小链家</span>
@@ -93,33 +92,16 @@
             <span class="title">Kun's Blog</span>
             <span class="notice">我的博客</span>
         </div>
-    </div>
 
-    <div class="category">
-        <span class="title">常用工具</span>
-    </div>
-
-    <div class="box">
         <div class="card" onclick="window.open('http://47.94.130.235:7001/')">
             <div class="item-logo"><img src="img/jenkins.png"></div>
             <span class="title">Jenkins</span>
             <span class="notice">dev-ops</span>
         </div>
-        <div class="card" onclick="window.open('http://34.92.3.80:3000/d/7tLmlbzGk/jvm-micrometer?orgId=1&refresh=30s')">
-            <div class="item-logo"><img src="img/grafana.png"></div>
-            <span class="title">Grafana</span>
-            <span class="notice">服务状态查看</span>
-        </div>
-        <div class="card" onclick="window.open('http://34.92.3.80:15588/#{%221590726793952%22:[]}')">
-            <div class="item-logo"><img src="img/logout.png"></div>
-            <span class="title">log.io</span>
-            <span class="notice">实时日志</span>
-        </div>
     </div>
 
-
     <div class="foot">
-        <span>© 2020 yueyakun2017  </span>
+        <span>© 2020 kun</span>
         <span style="margin-left: 10px"><a href="http://beian.miit.gov.cn">京ICP备19014273号-1</a></span>
     </div>
 </div>
